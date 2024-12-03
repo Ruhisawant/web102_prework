@@ -174,3 +174,27 @@ firstGameContainer.appendChild(topGameElement);
 const runnerUpGameElement = document.createElement("p");
 runnerUpGameElement.textContent = runnerUpGame.name;
 secondGameContainer.appendChild(runnerUpGameElement);
+
+/************************************************************************************
+ * Extra styling and features including search bar
+ * Skills used: spread operator, destructuring, template literals, sort 
+ */
+// Extra Styling and Features: Search Bar
+const searchBar = document.getElementById("search-bar");
+
+// Listen for input events on the search bar
+searchBar.addEventListener("input", function(event) {
+    const searchTerm = event.target.value.toLowerCase(); // Get search term in lowercase
+
+    // Filter the GAMES_JSON array based on the search term (name or category)
+    const filteredGames = GAMES_JSON.filter(game => {
+        return game.name.toLowerCase().includes(searchTerm) || game.category.toLowerCase().includes(searchTerm);
+    });
+
+    // Clear existing games before displaying the filtered ones
+    deleteChildElements(gamesContainer); // Assuming deleteChildElements function is defined to clear the container
+
+    // Re-display the filtered games
+    addGamesToPage(filteredGames); // Assuming addGamesToPage is your function to display games
+
+});
