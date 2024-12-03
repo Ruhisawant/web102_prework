@@ -26,7 +26,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='./assets/VideoWalkThrough.gif' title='Video Walkthrough' width='100%' alt='Video Walkthrough' />
+<img src='./assets/VideoWalkthrough.gif' title='Video Walkthrough' width='100%' alt='Video Walkthrough' />
 
 GIF created with ...  [Adobe Express](https://www.adobe.com/express/feature/video/convert/mov-to-gif)
 
